@@ -11,7 +11,6 @@ Set::Set(const Set& other){
 }
 
 Set::Set(Set&& other){
-	std::cout << "Ran Move\n";
 	mRoot = other.mRoot;
 	mCount = other.mCount;
 	other.mRoot = nullptr;
