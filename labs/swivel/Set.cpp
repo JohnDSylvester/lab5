@@ -88,7 +88,7 @@ size_t Set::remove(const std::string& value){
                         delete mRoot;
                         mRoot = temp;
                 }
-                else{
+                else{/*
 			mCount--;
                         Node* temp = mRoot->right;
                         Node* reattach = mRoot->left;
@@ -96,7 +96,7 @@ size_t Set::remove(const std::string& value){
                         delete mRoot;
                         temp->betterSwivel(lowest, temp, temp);
                         mRoot = temp;
-                        mRoot->left = reattach;
+                        mRoot->left = reattach;*/
                 }
                 return 1;
         }
