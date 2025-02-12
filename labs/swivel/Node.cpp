@@ -56,3 +56,46 @@ Node* Node::copy(Node* origin){
 		return nullptr;	
 	}
 }
+
+bool Node::betterSwivel(const std::string& value, Node* &head, Node* &prev){
+        if(head == nullptr){
+                return 0;
+        }
+        if(value < head->data){
+                return betterSwivel(value, head->left, head);
+        }
+        else if(value > head->data){
+                return betterSwivel(value, head->right, head);
+        }
+        else{
+                return 1;
+        }
+        if(head != prev){
+                if(prev->left != nullptr && prev->right == nullptr){
+                        Node* temp = head;
+                        std::cout << head << " " << temp << " " << prev;
+                        Node* tempLeft = head->left;
+                        Node* tempRight = head -> right;
+                        head = prev;
+                        prev = temp;
+                        prev->right= head;
+                        prev->left = nullptr;
+                        std::cout << head << " " << temp << " " << prev;
+                        head->left = tempLeft;
+                        head->right = tempRight;
+                }
+                if(prev->right != nullptr && prev->left == nullptr){
+                Node* temp = head;
+                        std::cout << head << " " << temp << " " << prev;
+                        Node* tempLeft = head->left;
+                        Node* tempRight = head -> right;
+                        head = prev;
+                        prev = temp;
+                        prev->left = head;
+                        prev->right = nullptr;
+                        std::cout << head << " " << temp << " " << prev;
+                        head->left = tempLeft;
+                        head->right = tempRight;
+                }
+        }
+} 
