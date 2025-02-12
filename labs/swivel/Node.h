@@ -10,7 +10,6 @@ class Node {
   Node*       left;
   Node*	      right;
 
-  //Node();
   Node(std::string value);
   Node* copy(Node* origin);
   size_t betterInsert(const std::string& value, Node* &head);
