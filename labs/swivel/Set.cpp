@@ -22,6 +22,7 @@ Set::~Set(){
 }
 
 size_t Set::insert(const std::string& value){
+	mCount++;
 	return mRoot->betterInsert(value, mRoot);	
 }
 
