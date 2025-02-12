@@ -13,6 +13,7 @@ class Node {
   Node(std::string value);
   Node* copy(Node* origin);
   size_t betterInsert(const std::string& value, Node* &head);
+  bool betterSwivel(const std::string& value, Node* &head, Node* &prev);
   std::string printBetter(Node* head);
   Node* printLeft(Node* head);
   void deleteSelf(Node* head);
