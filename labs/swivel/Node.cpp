@@ -73,7 +73,6 @@ bool Node::betterSwivel(const std::string& value, Node* &head, Node* &prev){
         if(head != prev){
                 if(prev->left != nullptr && prev->right == nullptr){
                         Node* temp = head;
-                        std::cout << head << " " << temp << " " << prev;
                         Node* tempLeft = head->left;
                         Node* tempRight = head -> right;
                         head = prev;
@@ -86,7 +85,6 @@ bool Node::betterSwivel(const std::string& value, Node* &head, Node* &prev){
                 }
                 if(prev->right != nullptr && prev->left == nullptr){
                 Node* temp = head;
-                        std::cout << head << " " << temp << " " << prev;
                         Node* tempLeft = head->left;
                         Node* tempRight = head -> right;
                         head = prev;
