@@ -8,6 +8,7 @@ Set::Set(){
 
 Set::Set(const Set& other){
 	mRoot = other.mRoot->copy(other.mRoot);
+	mCount = other.mCount;
 }
 
 Set::Set(Set&& other){
