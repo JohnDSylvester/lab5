@@ -70,12 +70,51 @@ size_t Set::clear(){
 }
 
 size_t Set::remove(const std::string& value){
-	return 1;
-	
+	if(mRoot->betterSwivel(value, mRoot, mRoot)){
+                if(mRoot->left == nullptr && mRoot->right == nullptr){
+                        mCount--;
+			delete mRoot;
+                        mRoot = nullptr;
+                }
+                else if (mRoot->left != nullptr && mRoot->right == nullptr){
+			mCount--;
+                        Node* temp = mRoot->left;
+                        delete mRoot;
+                        mRoot = temp;
+                }
+                else if (mRoot->left == nullptr && mRoot->right != nullptr){
+                        mCount--;
+			Node* temp = mRoot->right;
+                        delete mRoot;
+                        mRoot = temp;
+                }
+                else{
+			mCount--;
+                        Node* temp = mRoot->right;
+                        Node* reattach = mRoot->left;
+                        std::string lowest = (mRoot->left)->data;
+                        delete mRoot;
+                        temp->betterSwivel(lowest, temp, temp);
+                        mRoot = temp;
+                        mRoot->left = reattach;
+                }
+                return 1;
+        }
+        return 0;
 }
 
  bool   Set::swivel(const std::string& value){
-	return 0;
+	if(mRoot->data == value){
+                return 1;
+         }
+	 if(mCount == 0){
+		return 0;
+	 }
+	 Node* prev = nullptr;
+	 if(mRoot->betterSwivel(value, mRoot, prev)){
+		return 1;
+	 }
+	 
  }
 
 void   Set::debug(){
