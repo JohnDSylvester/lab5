@@ -32,7 +32,7 @@ size_t Set::count() const{
 
 void Set::print() const{
 	if(mRoot == nullptr){
-		std::cout << "()" << std::endl;
+		std::cout << "-" << std::endl;
 		return;
 	}
 	std::string str = "";
