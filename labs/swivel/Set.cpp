@@ -64,3 +64,16 @@ size_t Set::clear(){
 	 mCount = 0;
 	 return cou; 	 
 }
+
+size_t remove(const std::string& value){
+	return 1;
+	
+}
+
+ bool   swivel(const std::string& value){
+	return 0;
+ }
+
+void   debug(){
+	return;
+}
