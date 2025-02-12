@@ -22,8 +22,11 @@ Set::~Set(){
 }
 
 size_t Set::insert(const std::string& value){
-	mCount++;
-	return mRoot->betterInsert(value, mRoot);	
+	size_t didInsert = mRoot->betterInsert(value, mRoot);
+	if(didInsert){
+		mCount++;
+	}
+	return didInsert;	
 }
 
 size_t Set::count() const{
