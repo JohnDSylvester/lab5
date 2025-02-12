@@ -114,7 +114,9 @@ size_t Set::remove(const std::string& value){
 	 if(mRoot->betterSwivel(value, mRoot, prev)){
 		return 1;
 	 }
-	 
+	 else{
+	 return 0;
+	 }
  }
 
 void   Set::debug(){
