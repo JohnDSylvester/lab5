@@ -65,15 +65,15 @@ size_t Set::clear(){
 	 return cou; 	 
 }
 
-size_t remove(const std::string& value){
+size_t Set::remove(const std::string& value){
 	return 1;
 	
 }
 
- bool   swivel(const std::string& value){
+ bool   Set::swivel(const std::string& value){
 	return 0;
  }
 
-void   debug(){
+void   Set::debug(){
 	return;
 }
