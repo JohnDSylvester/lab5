@@ -22,11 +22,11 @@ public:
   size_t clear();
   bool   contains(const std::string& value) const;
   size_t count() const;
-  //void   debug();
+  void   debug();
   size_t insert(const std::string& value);
   void   print() const;
-  //size_t remove(const std::string& value);
-//  bool   swivel(const std::string& value);
+  size_t remove(const std::string& value);
+  bool   swivel(const std::string& value);
 
   // Used by the autograder:
   const Node* root() const {
