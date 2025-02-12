@@ -1,5 +1,5 @@
 #include "Node.h"
-#include <iostream>
+#include <string>
 
 Node::Node(std::string value){
         data = value;
